@@ -15,20 +15,20 @@ class PostList extends Component {
 
             return (
                 <div className="item" key={post.id}>
+                    <UserHeader userId={post.userId} />
                     <i className="large middle aligned icon user"></i>
                     <div className="content">
                         <div className="description">
                             <h2>{post.title}</h2>
                             <p>{post.body}</p>
                         </div>
-                        <UserHeader userId={post.userId} />
                     </div>
                 </div>    
             );
         });    
     }
     render() {
-
+        
         return (
             <div className="ui relaxed divided list">{this.renderList()}</div>
         );    
