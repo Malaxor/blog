@@ -13,13 +13,9 @@ class UserHeader extends Component {
 
         const { user } = this.props;
 
-        if(!user) {
-            return null;
-        }
-        return (
-
-            <div className="header">{user.name}</div>
-        );
+        if(!user) return null;
+        
+        return <div className="header">{user.name}</div>;
     }
 }
 
